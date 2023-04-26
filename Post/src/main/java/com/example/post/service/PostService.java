@@ -88,6 +88,7 @@ public class PostService {
                     () -> new NullPointerException("해당 상품은 존재하지 않습니다.")
             );
             post.update(requestDto);
+            postRepository.save(post);
             return new ResponseDto(post);
 
     }
